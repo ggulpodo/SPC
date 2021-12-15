@@ -1,0 +1,311 @@
+@charset 'utf-8';
+@import url('font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'helvetica neue', 'HelveticaNeue', 'Helvetica-Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;
+    color: #000;
+    letter-spacing: -0.054rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* 공통사항 */
+.container {
+    position: relative;
+    display: block;
+    width: 146rem;
+    margin: 0 auto;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 9rem;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 999999;
+    transition: background-color 0.1s;
+}
+
+/* 스크롤 했을 때 반응 */
+.header-active {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.header:hover {
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.logo {
+    position: absolute;
+    left: 6.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 15.1rem;
+    height: 5rem;
+    background: url('../images/gnb_logo_newwhite.png') no-repeat center;
+}
+
+.logo>img {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.header:hover .logo>img {
+    opacity: 1;
+}
+
+.header .container {
+    text-align: center;
+}
+
+.gnb {
+    display: inline-block;
+}
+
+.depth1 {
+    display: inline-block;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.depth1>li {
+    display: inline-block;
+}
+
+.mainmenu {
+    position: relative;
+    display: block;
+    line-height: 9rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 3rem;
+}
+
+.mainmenu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #23aee2;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.mainmenu:hover {
+    color: #23b0e3 !important; 
+}
+
+.mainmenu:hover::after {
+    opacity: 1;
+}
+
+.header:hover .mainmenu {
+    color: #000;
+}
+
+.language {
+    position: absolute;
+    top: 3rem;
+    right: 12rem;
+    display: block;
+    width: 5.5rem;
+    text-align: center;
+}
+
+.lang-icon {
+    display: inline-block;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: url('../images/icon_global.png') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.header:hover .lang-icon {
+    background: url('../images/icon_global_b.png') no-repeat center;
+    background-size: cover;
+}
+
+.lang-list {
+    display: block;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 30px 3px rgb(0 0 0 / 5%);
+
+    opacity: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.language:hover .lang-list {
+
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.lang-list>li {
+    margin-bottom: 1.5rem;
+}
+
+.lang-list>li:last-child {
+    margin-bottom: 0;
+}
+
+.lang-list>li>a {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: -0.051rem;
+    transition: color 0.3s;
+}
+
+.lang-list>li>a:hover {
+    color: #23b0e3;
+}
+
+.header-sub {
+    position: absolute;
+    left: 0;
+    top: 9rem;
+    display: block;
+    width: 100%;
+    height: 20rem;
+    background-color: #fff;
+    border-top: 0.1rem solid #e6e6e6;
+    border-radius: 0 0 4.6rem 0;
+    padding-bottom: 5rem;
+}
+
+/* // Header */
+
+/* Visual */
+.visual {
+    position: relative;
+    display: block;
+}
+
+/* // Visual */
+
+/* Group */
+.group {
+    position: relative;
+    display: block;
+}
+
+/* // Group */
+
+/* Brand */
+.brand {
+    position: relative;
+    display: block;
+}
+
+/* // Brand */
+
+/* Banner */
+.banner {
+    position: relative;
+    display: block;
+}
+
+/* // Banner */
+
+/* Point */
+.point {
+    position: relative;
+    display: block;
+}
+
+/* // Point */
+
+/* News */
+.news {
+    position: relative;
+    display: block;
+}
+
+/* // News */
+
+/* Magazine */
+.magazine {
+    position: relative;
+    display: block;
+}
+
+/* // Magazine */
+
+/* Youtube */
+.youtube {
+    position: relative;
+    display: block;
+}
+
+/* // Youtube */
+
+/* SNS */
+.sns {
+    position: relative;
+    display: block;
+}
+
+/* // SNS */
+
+/* Footer Brand */
+.f-brand {
+    position: relative;
+    display: block;
+}
+
+/* // Footer Brand */
+/* Footer */
+.footer {
+    position: relative;
+    display: block;
+}
+
+/* // Footer */
